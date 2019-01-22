@@ -14,13 +14,13 @@ public class Question {
     private String email;
     private String text;
     private Long topicId;
-    private AtomicInteger rate;
+    private Integer rate;
     private Status status;
 
     public Question() {
     }
 
-    public Question(String email, String text, Long topicId, AtomicInteger rate, Status status) {
+    public Question(String email, String text, Long topicId, Integer rate, Status status) {
         this.email = email;
         this.text = text;
         this.topicId = topicId;
@@ -52,11 +52,11 @@ public class Question {
         this.topicId = topicId;
     }
 
-    public AtomicInteger getRate() {
+    public Integer getRate() {
         return rate;
     }
 
-    public void setRate(AtomicInteger rate) {
+    public void setRate(Integer rate) {
         this.rate = rate;
     }
 
