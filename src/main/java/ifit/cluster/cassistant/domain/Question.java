@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Entity
 public class Question {
@@ -13,13 +14,13 @@ public class Question {
     private String email;
     private String text;
     private Long topicId;
-    private Integer rate;
+    private AtomicInteger rate;
     private Status status;
 
     public Question() {
     }
 
-    public Question(String email, String text, Long topicId, int rate, Status status) {
+    public Question(String email, String text, Long topicId, AtomicInteger rate, Status status) {
         this.email = email;
         this.text = text;
         this.topicId = topicId;
@@ -51,11 +52,11 @@ public class Question {
         this.topicId = topicId;
     }
 
-    public Integer getRate() {
+    public AtomicInteger getRate() {
         return rate;
     }
 
-    public void setRate(Integer rate) {
+    public void setRate(AtomicInteger rate) {
         this.rate = rate;
     }
 
